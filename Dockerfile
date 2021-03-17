@@ -1,4 +1,4 @@
-ARG BASE_CONTAINER=ucsdets/scipy-ml-notebook:2019.4.5
+ARG BASE_CONTAINER=ucsdets/scipy-ml-notebook:2021.1-stable
 FROM $BASE_CONTAINER
 
 LABEL maintainer="UC San Diego ITS/ETS <ets-consult@ucsd.edu>"
