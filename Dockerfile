@@ -12,9 +12,9 @@ RUN conda env create --file /tmp/ece227.yml
 RUN conda run -n ece227 /bin/bash -c "ipython kernel install --name=ece227"
 
 # can't remove base see https://github.com/jupyterhub/jupyterhub/issues/2759
-#RUN jupyter kernelspec uninstall base 
+#RUN jupyter kernelspec remove -f base 
 
-RUN jupyter kernelspec uninstall python3_clean
+RUN jupyter kernelspec remove -f python3_clean
 
 RUN apt-get update && apt-get -qq install -y \
 	libcairo2-dev libjpeg-dev libpango1.0-dev libgif-dev build-essential pkg-config \
