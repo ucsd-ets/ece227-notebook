@@ -1,0 +1,35 @@
+name: ece227
+channels:
+- conda-forge
+- defaults
+- pytorch
+- nvidia
+- rapidsai
+- numba
+dependencies:
+- pip
+- nccl
+- cudnn
+- cudatoolkit=10.1
+- cugraph
+- pip:
+  - ipywidgets
+  - nltk
+  - scapy
+  - tensorflow-gpu>=2.2
+  - numpy
+  - matplotlib
+  - pandas
+  - scapy
+  - datascience
+  - plotly
+  - bokeh
+  - seaborn
+  - opencv-python
+  - networkx
+  - rpy2==3.1.0
+  - python-igraph
+  - powerlaw
+  - scipy
+  - python-louvain 
+  

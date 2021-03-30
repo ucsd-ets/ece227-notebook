@@ -5,11 +5,18 @@ LABEL maintainer="UC San Diego ITS/ETS <ets-consult@ucsd.edu>"
 
 USER root
 
-RUN pip install networkx rpy2==3.1.0 python-igraph powerlaw numpy scipy python-louvain
+COPY ece227.yml /tmp
+
+RUN conda env create --file /tmp/ece227.yml
+
+RUN conda run -n ece227 /bin/bash -c "ipython kernel install --name=ece227"
+
+RUN jupyter kernelspec uninstall base python3_clean
 
 RUN apt-get update && apt-get -qq install -y \
 	libcairo2-dev libjpeg-dev libpango1.0-dev libgif-dev build-essential pkg-config \
 	&& apt-get clean
+
 
 RUN pip install pycairo
 
